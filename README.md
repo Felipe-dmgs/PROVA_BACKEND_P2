@@ -21,10 +21,10 @@ O projeto utiliza o Docker Compose para gerenciar os serviços de banco de dados
 
 ## 3. É esperado está sáida do pytes
 
-============================================================= test session starts =============================================================
-platform win32 -- Python 3.14.5, pytest-9.0.3, pluggy-1.6.0 -- C:\ProjetoArduino\PROVA_BACKEND_P2\.venv\Scripts\python.exe
+============================== test session starts =================================  
+platform win32 -- Python 3.14.5, pytest-9.0.3, pluggy-1.6.0 -- C:\Documents\PROVA_BACKEND_P2\.venv\Scripts\python.exe
 cachedir: .pytest_cache
-rootdir: C:\ProjetoArduino\PROVA_BACKEND_P2
+rootdir: C:\Documents\PROVA_BACKEND_P2
 configfile: pytest.ini
 testpaths: .
 plugins: anyio-4.13.0, cov-7.1.0
@@ -46,15 +46,15 @@ tests/test_produtos.py::test_criar_produto_payload_invalido[payload_invalido4] P
 tests/test_produtos.py::test_validar_banco_isolado_parte_1 PASSED                                                                        [ 93%]
 tests/test_produtos.py::test_validar_banco_isolado_parte_2 PASSED                                                                        [100%]
 
-=============================================================== tests coverage ================================================================
-_______________________________________________ coverage: platform win32, python 3.14.5-final-0 _______________________________________________
+============================== tests coverage ============================  
+________________ coverage: platform win32, python 3.14.5-final-0 _______________________
 
 Name      Stmts   Miss  Cover
 -----------------------------
 main.py      55      4    93%
 -----------------------------
-TOTAL        55      4    93%
-============================================================= 15 passed in 0.20s ==============================================================
+TOTAL        55      4    93%  
+============================ 15 passed in 0.20s =========================
 ## 4. Isolamento entre Testes
 - O isolamento do banco de dados ocorre devido a duas estratégias diferentes:
 1. Isolamento de bancos, O banco de dados de desenvolvimento é separado do banco de testes, enquanto o de desenvolvimento roda na porta padrão 5432, o de testes roda em outro contêiner na porta 5433. Garantindo que um nunca se misture com o outro.
