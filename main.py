@@ -60,10 +60,10 @@ def create_produto(produtoC: ProdutoCreate, db: Session =  Depends(get_db))-> Pr
     db.refresh(produto)
     return produto
 
-@app.delete("/produtos/{produto_id}", status_code=status.HTTP_200_OK)
-def delete_produtos(produto_id: int, db: Session =  Depends(get_db)) -> dict:
+@app.delete("/produtos/{produto_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_produtos(produto_id: int, db: Session =  Depends(get_db)) -> None:
     produto =  db.query(ProdutoBase).filter(ProdutoBase.id ==  produto_id).first()
     if not produto: raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Produto não encontrado")
     db.delete(produto)
     db.commit()
-    return {"message":"Produto deletado com sucesso"}
+    return None
