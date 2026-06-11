@@ -1,4 +1,4 @@
-# 🚀 Projeto E-Commerce - API de Produtos (FastAPI & SQLAlchemy)
+# Projeto E-Commerce - API de Produtos (FastAPI & SQLAlchemy)
 
 Projeto desenvolvido com FastAPI para o gerenciamento de produtos, utilizando PostgreSQL como banco de dados e Docker para conteinerização dos ambientes de desenvolvimento e teste.
 
